@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ul tag</title>
+
+    <style>
+        *,
+        *::after,
+        *::before{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            scroll-behavior: smooth;
+        }
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+        .header{
+            background-color: #000;
+            height: 80px;
+            color: #ffffff;
+            position: fixed;
+            width: 100%;
+        }
+        ul{
+            list-style-type: none;
+            padding: 2px;
+        }
+        .menu{
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+           width: 100%;
+           height: 100%;
+        }
+        .page{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #deddde;
+            font-size: 60px;
+            font-weight: 700;
+            height: 100vh;
+        }
+        .page:nth-child(odd){
+            background: #751717;
+        }
+        .menu>li {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .menu>li>ul{
+            position: absolute;
+            background: #000;
+            width: 300px;
+            top: 80px;
+            display: none;
+        }
+        .menu>li:hover>ul{
+            display: block;
+            background: #751717;
+        }
+        .menu>li>ul>li{
+            padding: 15px;
+        }
+        .menu>li>ul>li:hover{
+           
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <ul class="menu">
+            <li>
+                <a href="#about">ABOUT</a>
+                <ul>
+                    <li>
+                        <a href="#">ABOUT1</a>
+                    </li>
+                    <li>
+                        <a href="#">ABOUT2</a>
+                    </li>
+                    <li>
+                        <a href="#">ABOUT3</a>
+                    </li>
+                    <li>
+                        <a href="#">ABOUT4</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            <li>
+                <a href="#product">PRODUCT</a>
+                <ul>
+                <li>
+                    <a href="#">PRODUCT1</a>
+                </li>
+                <li>
+                    <a href="#">PRODUCT2</a>
+                </li>
+                <li>
+                    <a href="#">PRODUCT3</a>
+                </li>
+                <li>
+                    <a href="#">PRODUCT4</a>
+                </li>
+            </ul>
+            </li>
+            <li>
+                <a href="#contact us">CONTACT US</a>
+                <ul>
+                    <li>
+                        <a href="#">PRODUCT1</a>
+                    </li>
+                    <li>
+                        <a href="#">PRODUCT2</a>
+                    </li>
+                    <li>
+                        <a href="#">PRODUCT3</a>
+                    </li>
+                    <li>
+                        <a href="#">PRODUCT4</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#more">more</a>
+                <ul>
+                    <li>
+                        <a href="#">MORE1</a>
+                    </li>
+                    <li>
+                        <a href="#">MORE2</a>
+                    </li>
+                    <li>
+                        <a href="#">MORE3</a>
+                    </li>
+                    <li>
+                        <a href="#">MORE4</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="page" id="about">about</div>
+    <div class="page" id="product">product</div>
+    <div class="page" id="contact-us">contact-us</div>
+    <div class="page" id="more">more</div>
+       
+</body>
+</html>
