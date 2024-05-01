@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order</title>
+</head>
+<body>
+   <form action="" method="get">
+    <div>
+        <label for="login-account">帳號</label>
+        <input type="text" name="account" value="" placeholder="輸入帳號" id="login-account"/>
+    </div>
+    <div>
+       <input type="text" name="name" value="" placeholder="輸入名稱"/>
+    </div>
+<div>
+    <input type="password" name="password" value="" placeholder="輸入密碼"/>
+</div>
+<div>
+    <button type="submit">送出</button>
+</div>
+<div>
+    <button type="button" onclick="sayhi()">不會發送</button>
+</div>
+   </form>
+    <script>
+        const sayhi = () => {
+            alert('hi,但我不會發送，只會打招呼')
+        }
+    </script>
+</body>
+</html>
