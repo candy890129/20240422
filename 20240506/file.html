@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILE TAG</title>
+
+    <style>
+        *,
+        *::after,
+        ::before{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            max-width: 800px;
+            height: 100%;
+            position: relative;
+            margin: auto;
+            padding: 0 15px;
+        }
+
+        #my-pic{
+            padding: 20px;
+           border: 2px solid #dedede;
+           width: 100%;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FILE TAG</h1>
+        <form action="https://book.niceinfos.com/api/form/" method="post"  enctype="multipart/form-data">
+            <div>
+                <input type="file" id="my-pic" name="my-pic">
+            </div>
+            <input type="hidden" name="inject" value="hello">
+            <button>發送</button>
+        </form>
+       
+    </div>
+    
+    
+</body>
+</html>
