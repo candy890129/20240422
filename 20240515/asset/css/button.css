@@ -1,0 +1,58 @@
+.button-group{
+    margin-bottom: 20px;
+}
+
+.btn .primary{
+    background: #1b34be;
+    color: #f0f0f0;
+}
+
+.btn{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+
+    background: #666666;
+    color: #f0f0f0;
+}
+
+.btn.primary{
+    background: #1b34be;
+    color: #f0f0f0;
+}
+
+.btn.primary:hover{
+    background: #101d68;
+    color: #f0f0f0;
+}
+
+.btn.success{
+    background: #d6a241;
+    color: #f0f0f0;
+}
+
+.btn.success:hover{
+    background: #cf8f17;
+    color: #f0f0f0;
+}
+
+.btn.danger{
+    background: #e76ee1;
+    color: #f0f0f0;
+}
+
+.btn.danger:hover{
+    background: #eb43e2;
+    color: #f0f0f0;
+}
+
+.btn.dark{
+    background: #050505;
+    color: #f0f0f0;
+}
+
+.btn.dark:hover{
+    background: #464545;
+    color: #f0f0f0;
+}
