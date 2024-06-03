@@ -332,3 +332,7 @@ body {
     left: unset;
     right: calc(50% + 50px);
 }
+
+.logo {
+    background-image: url(../images/logo3.svg);
+}
