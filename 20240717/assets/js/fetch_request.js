@@ -24,9 +24,9 @@ const doPost = async (url) => {
     return await response.json();
 }
 
-const doUploadFile = async (url, file) => {
+// const doUploadFile = async (url, file) => {
 
-}
+// }
 
 domSend.addEventListener('click', async () => {
     console.log('send!');
@@ -64,9 +64,27 @@ const previewImage = (file) => {
         // encrypt 加密
     })
 }
+const doUploadFile = async (url, file) => {
+    if (!file) {
+        return;
+    }
+
+    let form = new FormData();
+    form.append('action', 'upload');
+    form.append('file', file);
+    // <input type="hidden" name="action" value="upload">
+    // <input type="file" name="file">
+
+    let options = {
+        method: 'POST',
+        body: form,
+    }
+
+    let response = await fetch(url, options);
+    return await response.json();
+}
 
 domUpload.addEventListener('click', async () => {
-    let url = 'https://book.niceinfos.com/frontend/api/';
     let file = domFile.files[0];
 
     if (!file) {
@@ -94,8 +112,12 @@ domUpload.addEventListener('click', async () => {
         return;
     }
 
-    console.log(file);
+    // console.log(file);
     let preview = await previewImage(file);
-    console.log(preview);
+    // console.log(preview);
     domPreview.src = preview;
+
+    let url = 'https://book.niceinfos.com/frontend/api/';
+    let response = await doUploadFile(url, file);
+    console.log(response);
 })
