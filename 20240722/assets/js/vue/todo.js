@@ -6,7 +6,17 @@ const options = {
         }
     },
     methods: {
-
+        add() {
+            console.log('add');
+            let id = Math.floor(Math.random() * 10000)
+            this.database.push({
+                id: id,
+                name: this.newItem,
+                checked: false
+            })
+            this.newItem = '';
+            this.$refs.new_item.focus()
+        }
     },
     mounted() {
         console.log('is mounted.');
@@ -28,7 +38,7 @@ const options = {
             checked: true
         })
 
-        console.log(this.database);
+        // console.log(this.database);
     }
 };
 
